@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 8.5vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+header img {
+    bottom: 1rem;
+    height: 7vh;
+}
+
+.landing {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff9ef;
+    background-image: url(./images/lander.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position-y: 8vh;
+    background-position-x: center;
+    
+}
+
+.butterfly {
+    width: 4vh;
+    position: absolute;
+    animation: butter 10s infinite;
+}
+
+@keyframes butter{
+from {
+    margin-top: 7vh;
+    margin-left: 81vw;
+}
+
+to {
+    margin-top: 14vh;
+    margin-left: 50.5vw;
+}
+}
+
+.landing h1 {
+    font-size: 2.5em;
+    margin: 0 7vw;
+    color: #B21E3E;
+    padding-top: 45vh;
+    margin-bottom: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.landing p {
+    font-weight: 500;
+    font-size: 1.1em;
+    margin: 0 7vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 20vh;
+}
+
+.mission {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 7vw 1fr 1fr 1fr 1fr 7vw;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+    grid-template-areas: 
+    ". write write look look ."
+    ". laugh laugh laugh laugh ."
+    ". heading heading heading heading ."
+    ". text text text text .";    
+}
+
+.about2 {
+    background-image: url(./images/aboutus2.jpg);
+    width: 100%;
+    height: 15vh;
+    grid-area: write;
+    background-size: cover;
+    margin-top: 10vh;
+}
+
+.about3 {
+    background-image: url(./images/aboutus3.jpg);
+    width: 100%;
+    height: 15vh;
+    grid-area: look;
+    background-size: cover;
+    background-position: center;
+    margin-top: 10vh;
+
+}
+
+.about1 {
+    background-image: url(./images/aboutus1.png);
+    width: 100%;
+    height: 15vh;
+    grid-area: laugh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.mission h2 {
+    margin: 5vh 7vw 0 7vw;
+    font-size: 2.5em;
+    color: #B21E3E;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mission p {
+    margin: 2vh 7vw;
+    font-weight: 500;
+    font-size: 1.1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    .members {
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff9ef;
+
+        
+    }
+
+    .members h2 {
+        font-size: 2.5em;
+        margin: 0 7vw;
+        color: #B21E3E;
+        padding-top: 5vh;
+        margin-bottom: 1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .members p {
+        font-weight: 500;
+        font-size: 1.1em;
+        margin: 0 7vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-bottom: 20vh;
+    }
+
+
+    
+    .gallery {
+        width: 100vw;
+        height: 100vh;        
+    }
+
+    .location {
+        width: 100vw;
+        height: 100vh; 
+        background-color: #fff9ef;
+    }
+
+    .location iframe {
+        width: 80%;
+        margin: 3rem auto;
+    }
