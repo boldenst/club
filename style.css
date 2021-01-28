@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -53,6 +54,7 @@ to {
 }
 
 .landing h1 {
+    text-align: center;
     font-size: 2.5em;
     margin: 0 7vw;
     color: #B21E3E;
@@ -121,7 +123,8 @@ to {
 
 .mission h2 {
     margin: 5vh 7vw 0 7vw;
-    font-size: 2.5em;
+    text-align: center;
+    font-size: 2.2em;
     color: #B21E3E;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -142,6 +145,7 @@ to {
     }
 
     .members h2 {
+        text-align: center;
         font-size: 2.5em;
         margin: 0 7vw;
         color: #B21E3E;
@@ -169,9 +173,52 @@ to {
         width: 100vw;
         height: 100vh; 
         background-color: #fff9ef;
+        display: flex;
+        flex-direction: column;
     }
 
     .location iframe {
-        width: 80%;
-        margin: 3rem auto;
+        width: 100%;
+    }
+
+    .calender {
+        align-self: center;
+        width: 90%;
+    }
+
+    .bold {
+        font-weight: bold;
+        margin: 0 7vw 0.5rem 7vw;
+    }
+
+    .nobold {
+        margin: 0 7vw 1rem 7vw;
+    }
+
+    .location h2 {
+        color: #B21E3E;
+        font-size: 3.5ch;
+        margin: 1.5rem 7vw;
+        text-align: center;
+    }
+
+    .location img {
+        width: 3rem;
+        margin-top: 3vh;
+        top: 1vh;
+        position: relative;
+        padding-right: 1rem;
+
+    }
+
+    .location a {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        font-size: 1.2em;
+        margin: 0 auto;
+    }
+    .contactwidget {
+        height: 10vh;
+        margin: 0 auto;
     }
