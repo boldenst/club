@@ -1,14 +1,27 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: noto-sans;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+    font-family: noto-sans;
+    src: url(./fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: noto-sans-bold;
+    src: url(./fonts/NotoSans-Bold.ttf);
 }
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
-header {
+nav {
+    z-index: 2;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -18,7 +31,7 @@ header {
     justify-content: space-around;
 }
 
-header img {
+nav img {
     bottom: 1rem;
     height: 7vh;
 }
@@ -32,7 +45,12 @@ header img {
     background-repeat: no-repeat;
     background-position-y: 8vh;
     background-position-x: center;
-    
+}
+
+.more {
+    position: absolute;
+    top: 33vh;
+    right: 6vw;
 }
 
 .butterfly {
@@ -41,34 +59,44 @@ header img {
     animation: butter 10s infinite;
 }
 
-@keyframes butter{
-from {
-    margin-top: 7vh;
-    margin-left: 81vw;
+@keyframes butter {
+    from {
+        margin-top: 7vh;
+        margin-left: 81vw;
+    }
+
+    to {
+        margin-top: 14vh;
+        margin-left: 50.5vw;
+    }
+}
+h1 {
+    color: #B21E3E;
+    font-size: 2.5em;
+    font-family: noto-sans-bold;
 }
 
-to {
-    margin-top: 14vh;
-    margin-left: 50.5vw;
+h2 {
+    color: #B21E3E;
+    font-family: noto-sans-bold;
+    font-size: 3.5ch;
 }
-}
+
+
 
 .landing h1 {
     text-align: center;
-    font-size: 2.5em;
     margin: 0 7vw;
-    color: #B21E3E;
     padding-top: 45vh;
     margin-bottom: 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .landing p {
     font-weight: 500;
     font-size: 1.1em;
     margin: 0 7vw;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-bottom: 20vh;
+    font-family: noto-sans-bold;
 }
 
 .mission {
@@ -82,11 +110,11 @@ to {
     grid-template-columns: 7vw 1fr 1fr 1fr 1fr 7vw;
     grid-template-rows: auto;
     gap: 0.5rem;
-    grid-template-areas: 
-    ". write write look look ."
-    ". laugh laugh laugh laugh ."
-    ". heading heading heading heading ."
-    ". text text text text .";    
+    grid-template-areas:
+        ". write write look look ."
+        ". laugh laugh laugh laugh ."
+        ". heading heading heading heading ."
+        ". text text text text .";
 }
 
 .about2 {
@@ -106,7 +134,6 @@ to {
     background-size: cover;
     background-position: center;
     margin-top: 10vh;
-
 }
 
 .about1 {
@@ -118,107 +145,324 @@ to {
     background-position: center;
 }
 
-
-
-
 .mission h2 {
     margin: 5vh 7vw 0 7vw;
     text-align: center;
-    font-size: 2.2em;
-    color: #B21E3E;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: noto-sans-bold;
 }
 
 .mission p {
     margin: 2vh 7vw;
     font-weight: 500;
     font-size: 1.1em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-    .members {
-        width: 100vw;
-        height: 100vh;
-        background-color: #fff9ef;
+.members {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff9ef;
+    display: flex;
+    flex-direction: column;
+}
 
-        
-    }
+.members h2 {
+    text-align: center;
+    margin: 0 7vw;
+    padding-top: 8vh;
+    margin-bottom: 1rem;
+}
 
-    .members h2 {
-        text-align: center;
-        font-size: 2.5em;
-        margin: 0 7vw;
-        color: #B21E3E;
-        padding-top: 5vh;
-        margin-bottom: 1rem;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+.memberinfo {
+    font-weight: 500;
+    font-size: 1.1em;
+    margin: 0 7vw;
+    font-family: noto-sans;
+}
 
-    .members p {
-        font-weight: 500;
-        font-size: 1.1em;
-        margin: 0 7vw;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        padding-bottom: 20vh;
-    }
+.membergrid {
+    margin: 9vh auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    grid-template-areas:
+        "alex alex oliver oliver"
+        "alexander alexander max max"
+}
+
+.membergrid img {
+    width: 100%;
+}
+
+.membergrid p {
+    text-align: center;
+}
+
+.bolds {
+    font-family: noto-sans-bold;
+}
+
+.alex {
+    grid-area: alex;
+}
+
+.oliver {
+    grid-area: oliver;
+}
+
+.alexander {
+    grid-area: alexander;
+}
+
+.max {
+    grid-area: max;
+}
 
 
-    
-    .gallery {
-        width: 100vw;
-        height: 100vh;        
-    }
 
-    .location {
-        width: 100vw;
-        height: 100vh; 
-        background-color: #fff9ef;
-        display: flex;
-        flex-direction: column;
-    }
+.gallery {
+    width: 100vw;
+    height: 100vh;
+}
 
-    .location iframe {
-        width: 100%;
-    }
+.gallery h2 {
+    text-align: center;
+    margin: 0 7vw;
+    padding-top: 5vh;
+    margin-bottom: 1rem;
+}
 
-    .calender {
-        align-self: center;
-        width: 90%;
-    }
+.gallery p {
+    font-weight: 500;
+    font-size: 1.1em;
+    margin: 0 7vw;
+    font-family: noto-sans;
+}
 
-    .bold {
-        font-weight: bold;
-        margin: 0 7vw 0.5rem 7vw;
-    }
+.gallygrid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 5vw 1fr 1fr 1fr 1fr 5vw;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+    grid-template-areas:
+        ". img1 img1 img1 img1 ."
+        ". img2 img2 img3 img3 ."
+        ". img4 img4 img3 img3 ."
+        ". img4 img4 img5 img5 ."
+        ". img6 img7 img7 img7 .";
+}
 
-    .nobold {
-        margin: 0 7vw 1rem 7vw;
-    }
+.img1 {
+    grid-area: img1;
+    width: 100%;
+    height: 20vh;
+    background-image: url(./images/coffee.png);
+    background-size: 72%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-    .location h2 {
-        color: #B21E3E;
-        font-size: 3.5ch;
-        margin: 1.5rem 7vw;
-        text-align: center;
-    }
+.img2 {
+    grid-area: img2;
+    width: 100%;
+    height: 10vh;
+    background-image: url(./images/night.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-    .location img {
-        width: 3rem;
-        margin-top: 3vh;
-        top: 1vh;
-        position: relative;
-        padding-right: 1rem;
+.img3 {
+    grid-area: img3;
+    width: 100%;
+    height: 25vh;
+    background-image: url(./images/moon.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-    }
+.img4 {
+    grid-area: img4;
+    width: 100%;
+    height: 25vh;
+    background-image: url(./images/dk.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    .location a {
-        position: relative;
-        text-decoration: none;
-        color: black;
-        font-size: 1.2em;
-        margin: 0 auto;
-    }
-    .contactwidget {
-        height: 10vh;
-        margin: 0 auto;
-    }
+}
+
+.img5 {
+    grid-area: img5;
+    width: 100%;
+    height: 10vh;
+    background-image: url(./images/desert.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img6 {
+    grid-area: img6;
+    width: 100%;
+    height: 12vh;
+    background-image: url(./images/controller.png);
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img7 {
+    grid-area: img7;
+    width: 100%;
+    height: 12vh;
+    background-image: url(./images/alexa.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.location {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff9ef;
+    display: flex;
+    flex-direction: column;
+}
+
+.location iframe {
+    width: 100%;
+}
+
+.calender {
+    margin: 2rem auto;
+    align-self: center;
+    width: 90%;
+}
+
+.bold {
+    font-weight: bold;
+    margin: 0 7vw 0.5rem 7vw;
+    font-family: noto-sans-bold;
+}
+
+.nobold {
+    margin: 0 7vw 1rem 7vw;
+}
+
+.location h2 {
+    margin: 1.5rem 7vw;
+    text-align: center;
+}
+
+.location img {
+    width: 3rem;
+    margin-top: 3vh;
+    top: 1vh;
+    position: relative;
+    padding-right: 1rem;
+
+}
+
+.location a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    margin: 0 auto;
+    font-family: noto-sans-bold;
+}
+
+.contactwidget {
+    height: 10vh;
+    margin: 0 auto;
+}
+
+.contactus {
+    width: 100vw;
+    height: 100vh;
+}
+
+.contactus h2 {
+    margin: 0 7vw;
+    padding-top: 9vh;
+    text-align: center;
+}
+
+.contactus p {
+    font-weight: 500;
+    font-size: 1.1em;
+    margin: 1.5vh 7vw;
+    font-family: noto-sans;
+}
+
+
+.contact-form {
+    margin-top: 5vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-form input {
+    border-bottom-right-radius: 1.3rem;
+    border-top-right-radius: 1.3rem;
+    margin: 0.5rem auto;
+    width: 70%;
+    padding-top: 0.7rem;
+    padding-left: 4vw;
+    padding-bottom: 0.7rem;
+    border: 2px solid #B21E3E;
+}
+
+
+
+.contact-form p {
+    color: #F58F4B;
+    margin-bottom: 0.3rem;
+}
+
+.contact-form button {
+    margin: 4vh auto;
+    background-color: white;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    width: 40%;
+    border: 2px solid #B21E3E;
+    text-align: center;
+    border-radius: 1.3rem;
+    font-weight: 500;
+    font-size: 1.9ch;
+    font-family: noto-sans-bold;
+}
+
+.contact-form textarea {
+    margin: 0.5rem auto;
+    width: 70%;
+    text-decoration: none;
+    border-bottom-right-radius: 1.3rem;
+    border-top-right-radius: 1.3rem;
+    padding-top: 0.7rem;
+    padding-left: 4vw;
+    padding-bottom: 5rem;
+    border: 2px solid #B21E3E;
+    resize: none;
+}
+
+.contact-form button:focus {
+    outline: none;
+}
+
+.contact-form input:focus {
+    outline: none;
+}
+
+.contact-form textarea:focus {
+    outline: none;
+}
